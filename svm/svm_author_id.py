@@ -9,9 +9,6 @@
 """
     
 import sys
-from time import time
-
-from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
 
 sys.path.append("../tools/")
