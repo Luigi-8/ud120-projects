@@ -2,6 +2,7 @@
 
 import pickle
 import numpy
+
 numpy.random.seed(42)
 
 
@@ -37,8 +38,16 @@ features_train = features_train[:150].toarray()
 labels_train   = labels_train[:150]
 
 
-
 ### your code goes here
+from sklearn.tree import DecisionTreeClassifier
+from tools.mylib import fit_and_predict
 
+clf = DecisionTreeClassifier()
+accuracy = fit_and_predict(clf, features_train, features_test, labels_train, labels_test)
+print("Tree {:.3}".format(accuracy))
+importances = clf.feature_importances_
+importances = [(x, num) for x, num in zip(importances, range(len(importances))) if x > 0.2]
+print(importances)
+print(vectorizer.get_feature_names()[importances[0][1]])
 
 

@@ -50,7 +50,9 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
 
         ### use str.replace() to remove any instances of the words
         ### ["sara", "shackleton", "chris", "germani"]
-        for signature in ["sara", "shackleton", "chris", "germani"]:
+        # two last words was added in lesson 12, you should not use them in lesson 11
+        for signature in ["sara", "shackleton", "chris", "germani",
+                          "sshacklensf", "cgermannsf"]:
             msg = msg.replace(signature, "")
 
         ### append the text to word_data
