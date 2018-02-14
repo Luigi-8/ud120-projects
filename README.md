@@ -1,4 +1,4 @@
-Udacity ud120-project.
+My Udacity ud120-project.
 
 Branches:
  * python3 - migrating project code to python3
